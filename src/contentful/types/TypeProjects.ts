@@ -1,10 +1,10 @@
-import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
+import type { Asset, ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful';
 
 export interface TypeProjectsFields {
     title?: EntryFieldTypes.Symbol;
     date?: EntryFieldTypes.Date;
     slug?: EntryFieldTypes.Symbol;
-    thumbnail?: EntryFieldTypes.AssetLink;
+    thumbnail?: Asset<undefined, string> | null;
     description?: EntryFieldTypes.RichText;
     desc?: EntryFieldTypes.Symbol;
 }

@@ -2,35 +2,32 @@ import { Entry } from 'contentful';
 import { TypeAboutPageSkeleton, TypeProjectsSkeleton } from '@/contentful/types';
 import { Metadata } from 'next';
 import { fetchContentfulItems } from '@/lib/utils';
-
-interface Project {
-    title?: string;
-    date?: Date |  `${number}-${number}-${number}T${number}:${number}:${number}Z`;
-    slug?: string;
-    desc?: string;
-}
+import ProjectCard from '@/components/project-card';
+import { Project } from '@/types/project';
 
 type ProjectsEntry = Entry<TypeProjectsSkeleton, undefined, string>
 function parseContentfulData(data?: ProjectsEntry): Project | null {
     if (!data) {
         return null
     }
+
     const fields = data.fields
     return {
         title: fields.title || "",
-        date: fields.date || new Date(),
+        date: new Date(fields.date!),
         slug: fields.slug || "",
-        desc: fields.desc || ""
+        desc: fields.desc || "",
+        thumbnail: fields.thumbnail || null
     }
 }
 
 export const metadata: Metadata = {
-    title: "About | Rotaract Arad Cetate",
+    title: "Projects | Rotaract Arad Cetate",
     description: "Learn more about Rotaract Arad Cetate Club!"
 }
 
 const Projects = async () => {
-    const res = await fetchContentfulItems<TypeAboutPageSkeleton, Project[]>(
+    const res = await fetchContentfulItems<TypeAboutPageSkeleton, Project>(
       "projects",
       parseContentfulData
     );
@@ -39,18 +36,17 @@ const Projects = async () => {
     }
 
     return (
-      <h1>{JSON.stringify(res)}</h1>
-      // <main className="flex justify-center px-40 py-20">
-      //     <article className="prose dark:prose-invert">
-      //         <h1>{title}</h1>
-      //         {sections.map((section, index) => (
-      //           <div key={index}>
-      //               <h2>{section.title}</h2>
-      //               <p>{section.content}</p>
-      //           </div>
-      //         ))}
-      //     </article>
-      // </main>
+      <main className="flex flex-col items-center justify-center gap-10 px-40 py-12">
+          <h1 className="text-4xl">Projects</h1>
+          <div className="flex">
+              {res && res.map((project, index) => (
+                <ProjectCard
+                  project={project}
+                  key={index}
+                />
+              ))}
+          </div>
+      </main>
     );
 };
 

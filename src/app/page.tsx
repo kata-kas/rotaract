@@ -6,8 +6,8 @@ import { ModeToggle } from '@/components/mode-toggle';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 export const metadata: Metadata = {
-  title: "Dashboard",
-  description: "Example dashboard app built using the components.",
+  title: "Rotaract Arad Cetate Club",
+  description: "Empowering Change, Inspiring Futures",
 }
 
 export default function DashboardPage() {

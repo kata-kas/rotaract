@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/components/theme-provider';
 import { MainNav } from '@/components/main-nav';
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
       <ThemeProvider
         attribute="class"
@@ -29,7 +31,9 @@ export default function RootLayout({
             <MainNav className="mx-6" />
           </div>
         </div>
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
       </ThemeProvider>
       </body>
     </html>
