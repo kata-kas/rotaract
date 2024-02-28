@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@/components/theme-provider';
+import { MainNav } from '@/components/main-nav';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+      >
+        <div className="hidden flex-col md:flex">
+          <div className="border-b">
+            <MainNav className="mx-6" />
+          </div>
+        </div>
+        {children}
+      </ThemeProvider>
+      </body>
     </html>
   );
 }
