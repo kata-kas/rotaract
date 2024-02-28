@@ -1,7 +1,7 @@
-import { Entry, type EntryFieldTypes } from 'contentful';
-import { TypeAboutPageSkeleton, TypeProjectsFields, TypeProjectsSkeleton } from '@/contentful/types';
+import { Entry } from 'contentful';
+import { TypeAboutPageSkeleton, TypeProjectsSkeleton } from '@/contentful/types';
 import { Metadata } from 'next';
-import { fetchContentfulItem, fetchContentfulItems, parseContentfulContentImage } from '@/lib/utils';
+import { fetchContentfulItems } from '@/lib/utils';
 
 interface Project {
     title?: string;
@@ -37,8 +37,6 @@ const Projects = async () => {
     if (!res) {
         return null;
     }
-
-
 
     return (
       <h1>{JSON.stringify(res)}</h1>
