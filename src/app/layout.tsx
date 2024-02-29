@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
+import { Suspense } from 'react';
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/components/theme-provider';
 import { MainNav } from '@/components/main-nav';
-import { Suspense } from 'react';
 import Loading from '@/app/loading';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>
           {children}
         </Suspense>
+          <Analytics />
       </ThemeProvider>
       </body>
     </html>
