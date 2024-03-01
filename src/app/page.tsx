@@ -1,10 +1,7 @@
 import { Metadata } from "next"
 import Image from "next/image"
-
-import { MainNav } from "@/components/main-nav"
-import { ModeToggle } from '@/components/mode-toggle';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+
 export const metadata: Metadata = {
   title: "Rotaract Arad Cetate Club",
   description: "Empowering Change, Inspiring Futures",
@@ -14,7 +11,7 @@ export default function DashboardPage() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center items-center overflow-hidden relative bg-black">
+        className="w-full h-[90%] flex justify-center items-center overflow-hidden relative bg-black">
         <Image
           src={`/hand.webp`}
           alt="Hero Image"
