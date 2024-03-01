@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 import * as React from "react"
 import {
     CaretSortIcon,
@@ -121,38 +120,10 @@ export const columns: ColumnDef<Subscriber>[] = [
             return <div>{date.toDateString()}</div>
         },
     },
-    {
-        id: "actions",
-        enableHiding: false,
-        cell: ({ row }) => {
-            const payment = row.original
-
-            return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0">
-                            <span className="sr-only">Open menu</span>
-                            <DotsHorizontalIcon className="h-4 w-4" />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem
-                            onClick={() => navigator.clipboard.writeText(payment.id)}
-                        >
-                            Copy payment ID
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>View customer</DropdownMenuItem>
-                        <DropdownMenuItem>View payment details</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            )
-        },
-    },
 ]
 
-export function SubscribersTable({data}:{data:Subscriber[]}) {
+export function SubscribersTable({tableData, deleteSubscriber}:{tableData:Subscriber[], deleteSubscriber: (id:string) => void}) {
+    const [data, setData] = React.useState<Subscriber[]>(tableData)
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -180,18 +151,32 @@ export function SubscribersTable({data}:{data:Subscriber[]}) {
         },
     })
 
+    const onDelete = () => {
+        const selectedRows = table.getFilteredSelectedRowModel().rows;
+        selectedRows.forEach(row => {
+            table.getRowModel().rows.find(r => r.original.id === row.original.id)?.toggleSelected(false);
+            setData(data.filter(subscriber => subscriber.id !== row.original.id));
+            deleteSubscriber(row.original.id);
+        });
+    }
+
     return (
         <div className="w-full">
             <div className="flex items-center py-4">
-                <Input
-                    placeholder="Filter emails or names..."
-                    value={(table.getState().globalFilter as string) ?? ""}
-                    onChange={(event) => {
-                      const searchValue = event.target.value.toLowerCase();
-                      table.setGlobalFilter(searchValue);
-                    }}
-                    className="max-w-sm"
-                />
+                <div className="flex gap-4">
+                    <Input
+                        placeholder="Filter emails or names..."
+                        value={(table.getState().globalFilter as string) ?? ""}
+                        onChange={(event) => {
+                            const searchValue = event.target.value.toLowerCase();
+                            table.setGlobalFilter(searchValue);
+                        }}
+                        className="max-w-sm"
+                    />
+                    {(table.getIsSomeRowsSelected() || table.getIsAllRowsSelected()) && (
+                        <Button onClick={onDelete} variant="destructive">Delete</Button>
+                    )}
+                </div>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button variant="outline" className="ml-auto">
