@@ -1,6 +1,6 @@
 export default function StripeTestCards(): JSX.Element {
     return (
-        <div className="bg-gray-100 p-5 rounded-lg my-5">
+        <div className="p-5 rounded-lg my-5">
             <span>
                 Use any of the{" "}
                 <a
