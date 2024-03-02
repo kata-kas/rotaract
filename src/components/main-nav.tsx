@@ -5,6 +5,7 @@ import {Logo} from '@/components/logo';
 import {Logout} from '@/components/logout';
 import {auth} from '@/auth';
 import NavItem from "@/components/nav-item";
+import DonateButton from "@/components/donate-button";
 
 export async function MainNav({
                                   className,
@@ -29,6 +30,7 @@ export async function MainNav({
                 <NavItem href="/members" label="Members"/>
             </nav>
             <div className="flex items-center justify-end gap-2">
+                <DonateButton />
                 {
                     session?.user && <Logout/>
                 }

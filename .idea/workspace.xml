@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f862a3c8-fd45-4a10-ae43-4f8274fdf4e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/actions/stripe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/donate/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/donate/result/error.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/donate/result/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/projects/[slug]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkout-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/confetti.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom-donation-input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/donate-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/stripe-test-cards.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/get-stripejs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stripe-helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stripe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/members/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/members/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/subscribers-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/subscribers-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/data/subscribers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/data/subscribers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/project-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +92,7 @@
       <updated>1709134709686</updated>
       <workItem from="1709134710749" duration="27396000" />
       <workItem from="1709227127140" duration="674000" />
-      <workItem from="1709311350956" duration="8984000" />
+      <workItem from="1709311350956" duration="18835000" />
     </task>
     <servers />
   </component>

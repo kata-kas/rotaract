@@ -58,3 +58,28 @@ export function parseContentfulContentImage(
     height: asset.fields.file?.details.image?.height || 0,
   }
 }
+
+export function formatAmountForStripe(
+    amount: number,
+    currency: string
+): number {
+  let numberFormat = new Intl.NumberFormat(['en-US'], {
+    style: 'currency',
+    currency: currency,
+    currencyDisplay: 'symbol',
+  })
+  const parts = numberFormat.formatToParts(amount)
+  let zeroDecimalCurrency: boolean = true
+  for (let part of parts) {
+    if (part.type === 'decimal') {
+      zeroDecimalCurrency = false
+    }
+  }
+  return zeroDecimalCurrency ? amount : Math.round(amount * 100)
+}
+
+export function parseUnixTimestamp(timestamp: number): string {
+  const milliseconds = timestamp * 1000;
+  const dateObject = new Date(milliseconds);
+  return dateObject.toLocaleString();
+}
