@@ -24,14 +24,14 @@ export default async function DonateResult(props: Props) {
     const createdDate = parseUnixTimestamp(created);
 
     return (
-        <div className="w-full py-12 prose mx-auto">
+        <div className="w-full py-12 prose dark:prose-invert mx-auto">
             <Confetti/>
             <div className="container flex flex-col items-center gap-4 px-4 md:px-6">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                         Thank You For Your Donation,  {customer_details?.name}!
                     </h1>
-                    <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    <p className="max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         Your contribution will make a difference in our cause.
                     </p>
                 </div>
@@ -44,7 +44,7 @@ export default async function DonateResult(props: Props) {
                     </div>
                 </div>
                 <Link
-                    className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-900 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                    className="inline-flex h-10 items-center justify-center rounded-md border px-8 text-sm font-medium shadow-sm transition-colors"
                     href="/"
                 >
                     Back to Homepage
