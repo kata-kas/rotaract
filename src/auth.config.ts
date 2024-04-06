@@ -4,16 +4,16 @@ export const authConfig = {
   pages: {
     signIn: '/login',
   },
+  trustHost: true,
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isOnDashboard = nextUrl.pathname.startsWith('/members');
-
+      const isOnDashboard = nextUrl.pathname.includes('/members');
+      console.log({isLoggedIn, isOnDashboard });
       if (isOnDashboard) {
         return isLoggedIn;
-      } else if (isLoggedIn) {
-        return Response.redirect(new URL('/members', nextUrl));
       }
+
       return true;
     },
   },
