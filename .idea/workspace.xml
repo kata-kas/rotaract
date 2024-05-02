@@ -5,25 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f862a3c8-fd45-4a10-ae43-4f8274fdf4e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/locale/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locale/de.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locale/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locale/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/volunteer.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/locale-switcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/subscribers/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/api/subscribers/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/donate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/donate/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/donate/result/error.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/donate/result/error.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/donate/result/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/donate/result/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/members/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/members/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/projects/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main-nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/messages/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locale/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/messages/ro.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
@@ -80,6 +79,8 @@
       <recent name="$PROJECT_DIR$/src/app/about" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/[locale]" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -99,6 +100,8 @@
       <workItem from="1711479364193" duration="4593000" />
       <workItem from="1712214239716" duration="1612000" />
       <workItem from="1712407422901" duration="2229000" />
+      <workItem from="1714325901130" duration="3051000" />
+      <workItem from="1714683296232" duration="1024000" />
     </task>
     <servers />
   </component>

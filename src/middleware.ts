@@ -1,6 +1,6 @@
 import {auth} from "@/auth";
 import {NextRequest, NextResponse} from "next/server";
-import {i18nConfig} from "@/locale/config";
+import {i18nConfig} from "../messages/config";
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 

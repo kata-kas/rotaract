@@ -6,6 +6,7 @@ import {Logout} from '@/components/logout';
 import {auth} from '@/auth';
 import NavItem from "@/components/nav-item";
 import DonateButton from "@/components/donate-button";
+import {LocaleSwitcher} from "@/components/locale-switcher";
 
 export async function MainNav({
                                   className,
@@ -35,6 +36,7 @@ export async function MainNav({
                     session?.user && <Logout/>
                 }
                 <ModeToggle/>
+                <LocaleSwitcher />
             </div>
         </div>
     )
