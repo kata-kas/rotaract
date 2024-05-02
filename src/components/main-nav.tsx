@@ -15,7 +15,7 @@ export async function MainNav({
     const session = await auth();
 
     return (
-        <div className="grid grid-cols-3 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 px-4">
             <Link
                 href="/"
                 className="text-sm font-medium transition-colors hover:text-primary"
@@ -23,7 +23,7 @@ export async function MainNav({
                 <Logo/>
             </Link>
             <nav
-                className={cn("flex items-center justify-center space-x-4 lg:space-x-6", className)}
+                className={cn("hidden md:flex items-center justify-center space-x-4 lg:space-x-6", className)}
                 {...props}
             >
                 <NavItem href="/about" label="About"/>

@@ -39,7 +39,7 @@ export default function LocaleLayout({children, params: {locale}}: Props) {
             defaultTheme="system"
             enableSystem
         >
-            <div className="hidden flex-col md:flex">
+            <div className="flex-col flex">
                 <div className="border-b">
                     <MainNav className="mx-6"/>
                 </div>
