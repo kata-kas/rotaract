@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --font-urbanist: 'Urbanist', sans-serif;
+
+    /* Brand Colors - Rotaract Pink/Magenta Theme (#CF005D) */
+    --color-primary-50: oklch(0.97 0.03 350);
+    --color-primary-100: oklch(0.94 0.06 350);
+    --color-primary-200: oklch(0.88 0.12 350);
+    --color-primary-500: oklch(0.55 0.25 350);
+    --color-primary-600: oklch(0.48 0.25 350);
+
+    /* Neutral Colors */
+    --color-neutral-100: oklch(0.97 0.005 260);
+    --color-neutral-200: oklch(0.93 0.005 260);
+    --color-neutral-300: oklch(0.88 0.005 260);
+    --color-neutral-500: oklch(0.63 0.02 260);
+    --color-neutral-700: oklch(0.45 0.02 260);
+    --color-neutral-800: oklch(0.37 0.02 260);
+
+    /* Semantic Color Aliases */
+    --color-brand: var(--color-primary-500);
+    --color-brand-light: var(--color-primary-100);
+    --color-brand-dark: var(--color-primary-600);
+
+    --color-text: var(--color-neutral-800);
+    --color-text-muted: var(--color-neutral-500);
+    --color-text-light: var(--color-neutral-700);
+
+    --color-border: transparent;
+    --color-border-light: transparent;
+    --color-border-dark: transparent;
+
+    --color-bg: oklch(1 0 0);
+    --color-bg-muted: var(--color-primary-50);
+
+    /* Marquee animation */
+    --animate-marquee: marqueeScroll 30s linear infinite;
+}
+
+@layer base {
+    body {
+        @apply bg-bg text-sm text-text antialiased;
+    }
+}
+
+@layer utilities {
+    @keyframes marqueeScroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .animate-marquee {
+            animation: none !important;
+        }
+    }
+}
