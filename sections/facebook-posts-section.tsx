@@ -1,34 +1,11 @@
 import SectionTitle from '@/components/section-title';
 import FacebookPostsParallax from '@/components/facebook-posts-parallax';
-import { IFacebookPostCard } from '@/types';
 import { FacebookIcon } from 'lucide-react';
 import AnimatedContent from '@/components/animated-content';
-
-async function getPosts(): Promise<{ posts?: IFacebookPostCard[]; error?: string }> {
-    try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/facebook-posts`, {
-            next: { revalidate: 3600 }
-        });
-
-        if (!response.ok) {
-            return { error: 'Failed to fetch posts' };
-        }
-
-        const data = await response.json();
-
-        if (data.success && data.posts) {
-            return { posts: data.posts };
-        }
-
-        return { error: data.error || 'Failed to load posts' };
-    } catch (err) {
-        console.error('Error fetching posts:', err);
-        return { error: 'Network error' };
-    }
-}
+import { getFacebookPosts } from '@/lib/facebook';
 
 export default async function FacebookPostsSection() {
-    const { posts, error } = await getPosts();
+    const { posts, error } = await getFacebookPosts();
 
     if (error || !posts) {
         return (
